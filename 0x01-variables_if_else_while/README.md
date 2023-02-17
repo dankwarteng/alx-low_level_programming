@@ -57,12 +57,8 @@
          
          A program that prints all possible different combinations of three digits
 
-
-<<<<<<< HEAD
-Task 12: Software is eating the World 
-         A program that prints all possible combinations of two two-digit numbers.   
-=======
+      
 **Task 12: Software is eating the World**
          
          A program that prints all possible combinations of two two-digit numbers   
->>>>>>> 45c8c81fbcabc1e7080d326680d32e8fa234fd8e
+
