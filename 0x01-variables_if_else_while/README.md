@@ -47,4 +47,4 @@ Task 11: The success combination in business is: Do what you do better... and: d
 
 
 Task 12: Software is eating the World 
-         A program that prints all possible combinations of two two-digit numbers   
+         A program that prints all possible combinations of two two-digit numbers.   
