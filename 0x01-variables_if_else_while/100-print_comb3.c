@@ -19,6 +19,12 @@ continue;
 putchar(',');
 putchar(' ');
 }
+<<<<<<< HEAD
+=======
+}
+putchar('\n');
+return (0);
+>>>>>>> 674ed11b9208e6d528340ec990e3a7f56406b7a1
 }
 putchar('\n');
 return (0);
