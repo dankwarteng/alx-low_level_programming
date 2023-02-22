@@ -1,3 +1,6 @@
+**0x02. C - Functions, nested loops**
+
+
 **Task 0: Putchar**
           
           A program that prints _putchar, followed by a new line
