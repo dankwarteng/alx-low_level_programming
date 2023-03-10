@@ -24,7 +24,6 @@
 
           A function that locates a substring
 
-
 **Task 6: Chess is mental torture**
 
           A function that prints the chessboard
