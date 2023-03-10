@@ -1,4 +1,3 @@
-
 **Task 0: memset**
           
           A function that fills memory with a constant byte
@@ -15,7 +14,7 @@
 
 **Task 3: strspn**
 
-          A function that gets the length of a prefix substring
+          A  function that gets the length of a prefix substring
 
 **Task 4: strpbrk**
 
@@ -24,7 +23,6 @@
 **Task 5: strstr**
 
           A function that locates a substring
-
 
 **Task 6: Chess is mental torture**
 
@@ -36,11 +34,13 @@
           A function that prints the sum of the two diagonals of a square matrix of integers
 
 
-**Task 8:  Double pointer, double fun**
+**Task 8: Double pointer, double fun**
  
           A function that sets the value of a pointer to a char
 
-**Task 9: My primary goal of hacking was the intellectual curiosity, the seduction of adventure**
 
-          A file that contains the password for the crackme2 executable
+**Task 9: My primary goal of hacking was the intellectual curiosity, the seduction of adventur**
+
+          A file that contains the password for the crackme2 executable 
+
 
