@@ -18,7 +18,7 @@
 
 **Task 4: To infinity and beyond**
 
-          A A program that adds positive numbers
+          A program that adds positive numbers
 
 **Task 5: Minimal Number of Coins for Change**
 
