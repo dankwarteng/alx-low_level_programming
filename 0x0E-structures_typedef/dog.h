@@ -8,7 +8,6 @@
  * @owner: The owner of the dog.
  * dog_t - Typedef for the struct Dog.
  */
-
 struct dog
 {
 	char *name;
