@@ -29,8 +29,8 @@ void print_all(const char * const format, ...);
  */
 typedef struct p
 {
-  char *p;
-  void (*f)(va_list);
+char *p;
+void (*f)(va_list);
 } checker;
 
 void print_c(va_list);
