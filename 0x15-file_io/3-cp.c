@@ -1,47 +1,47 @@
 #include "main.h"
 #define BUFFERSIZE 1204
 /**
-  * main - Copies content.
+  * 3-cp - copies the content of a file to another file.
   * @argc: Arguments count.
   * @argv: Files names.
   * Return: 0 on success
   */
 int main(int argc, char **argv)
 {
-	int fd_in, fd_out, read_file, check;
+	int file_din, file_dout, r_file, check;
 	char buffer[BUFFERSIZE];
-	/*Opening a file for writing by the owner*/
+	
 	mode_t mode_file = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	/*Block of algorithm for validate data*/
+	
 	if (argc != 3)
-		/*print to a file descriptor */
+		
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-	fd_in = open(argv[1], O_RDONLY);
-	if (fd_in == -1)
+	file_din = open(argv[1], O_RDONLY);
+	if (file_din == -1)
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	fd_out = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode_file);
-	if (fd_out == -1)
+	file_dout = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode_file);
+	if (file_dout == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	read_file = check = 1;
-	while (read_file)
+	r_file = check = 1;
+	while (r_file)
 	{
-		read_file = read(fd_in, buffer, BUFFERSIZE);
-	if (read_file == -1) /*If can't read*/
+		r_file = read(file_din, buffer, BUFFERSIZE);
+	if (r_file == -1)
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-		if (read_file > 0)
+		if (r_file > 0)
 		{
-			check = write(fd_out, buffer, read_file);
-			if (check == -1) /*If can't write*/
+			check = write(file_dout, buffer, r_file);
+			if (check == -1) 
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		}
 	}
-	check = close(fd_in); /*close file*/
+	check = close(file_din); 
 	if (check == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_in), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close file_d %d\n", file_din), exit(100);
 
-	check = close(fd_out);
+	check = close(file_dout);
 
 	if (check == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_out), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close file_d %d\n", file_dout), exit(100);
 	return (0);
 }
