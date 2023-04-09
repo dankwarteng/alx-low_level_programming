@@ -12,10 +12,10 @@ char *buffer;
 buffer = malloc(sizeof(char) * letters);
 
 	
-if (filename == NULL)
+if (!filename)
 return (0);
 
-if (buffer == NULL)
+if (!buffer)
 return (0);
 
 fd = open(filename, O_RDONLY);
