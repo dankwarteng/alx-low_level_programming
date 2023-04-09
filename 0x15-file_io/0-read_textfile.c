@@ -20,7 +20,7 @@ return (0);
 
 file_d = open(filename, O_RDONLY);
 
-b_w = write(STDOUT_FILENO, buffer, read(file_d, buffer, letters));
+size = write(STDOUT_FILENO, buffer, read(file_d, buffer, letters));
 if (file_d == -1 || size == -1)
 return (0);	
 close(file_d);
