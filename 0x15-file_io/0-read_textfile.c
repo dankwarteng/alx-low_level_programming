@@ -11,15 +11,15 @@ int file_d,b_w;
 char *buffer;
 buffer = malloc(sizeof(char) * letters);
 
-	
+/*Check content file*/	
 if (!filename)
 return (0);
-
+/*Check value of buffer*/
 if (!buffer)
 return (0);
-
+/*Open file*/
 file_d = open(filename, O_RDONLY);
-
+/*Read file*/
 b_w = write(STDOUT_FILENO, buffer, read(file_d, buffer, letters));
 if (file_d == -1 || b_w == -1)
 return (0);	
@@ -27,3 +27,4 @@ close(file_d);
 free(buffer);
 return (b_w);
 }
+
