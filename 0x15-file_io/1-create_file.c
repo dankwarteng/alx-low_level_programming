@@ -1,37 +1,37 @@
 #include "main.h"
-
 /**
  * create_file - Creates a file.
- * @filename: Name of the file 2 create.
- * @text_content: Text 2 write in the file.
+ * @filename: Name of created file.
+ * @text_content: Text written in the created file.
  * Return: 1 on success, -1 on failure (file can not be created,
- * file can not be written, write “fails”, etc…)
+ * file can not be written, write “fails”, etc)
  */
+
 int create_file(const char *filename, char *text_content)
 {
-	int fd, write_f;
+	int file_d, w_file;
 
-	/*Check content file*/
-	if (!filename)
+	
+	if (filename == NULL)
 		return (-1);
 
-	/*Open file*/
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+	
+	file_d = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 
-	if (fd == -1) /*If it fails*/
+	if (file_d == -1) 
 	{
 		return (-1);
 	}
 
-	if (!text_content)
+	if (text_content== NULL)
 		return (1);
 
-	/*Write file*/
-	write_f = write(fd, text_content, strlen(text_content));
-	close(fd);
-	if (write_f == -1) /*If it fails*/
+	
+	w_file= write(file_d, text_content, strlen(text_content));
+	close(file_d);
+	if (w_file == -1)
 	{
-		close(fd); /*Close file*/
+		close(file_d); 
 		return (-1);
 	}
 
