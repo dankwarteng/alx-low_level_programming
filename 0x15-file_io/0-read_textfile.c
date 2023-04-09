@@ -7,7 +7,7 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fdes, size;
+int fd, size;
 char *buffer;
 buffer = malloc(sizeof(char) * letters);
 
@@ -18,12 +18,12 @@ return (0);
 if (buffer == NULL)
 return (0);
 
-fdes = open(filename, O_RDONLY);
+fd = open(filename, O_RDONLY);
 
-size = write(STDOUT_FILENO, buffer, read(fdes, buffer, letters));
-if (fdes == -1 || size == -1)
+size = write(STDOUT_FILENO, buffer, read(fd, buffer, letters));
+if (fd == -1 || size == -1)
 return (0);	
-close(fdes);
+close(fd);
 free(buffer);
 return (size);
 }
