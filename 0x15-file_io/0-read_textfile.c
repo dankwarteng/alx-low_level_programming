@@ -5,6 +5,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int file_d;
 	int b_rd, b_w;
 	char *buffer;
+	
 	if (filename == NULL)
 		return (0);
 	file_d = open(filename, O_RDONLY);
