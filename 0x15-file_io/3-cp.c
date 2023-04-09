@@ -1,7 +1,7 @@
 #include "main.h"
 #define BUFFERSIZE 1204
 /**
-  * main - Copies content.
+  * 3-cp - copies the content of a file to another file.
   * @argc: Arguments count.
   * @argv: Files names.
   * Return: 0 on success
